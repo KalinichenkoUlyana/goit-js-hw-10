@@ -12,9 +12,35 @@ body {
   line-height: 1.5;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 #search-box {
   font: inherit;
   padding: 8px;
   max-width: 320px;
   margin-bottom: 16px;
+}
+.country-item {
+  display: flex;
+  align-items: center;
+  background-color: rgb(231, 204, 236);
+  width: 200px;
+}
+ul,
+ol {
+  list-style: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+}
+.country-flag {
+  margin-right: 15px;
 }
