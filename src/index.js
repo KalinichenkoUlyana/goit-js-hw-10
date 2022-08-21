@@ -45,16 +45,22 @@ function renderCountry(countries) {
 
         if (inputValueLength > 10) {
             Notiflix.Notify.info('Too many matches found. Please enter a more specific name.')
+            return;
         }
-        if (inputValueLength <= 1) {
+         checkSizeForRender(inputValueLength, elementSymbols, elementInfo);
+    }
+}
+
+function checkSizeForRender(inputValueLength, elementSymbols, elementInfo) {
+
+    if (inputValueLength <= 1) {
             countryList.insertAdjacentHTML('beforeend', elementSymbols);
             countryInfo.insertAdjacentHTML('beforeend', elementInfo);
         }
         else {
-             countryList.insertAdjacentHTML('beforeend', elementSymbols);
-             return;
+            countryList.insertAdjacentHTML('beforeend', elementSymbols);
         }
-} }
+}
 
 function ifFetchError(error) {
     Notiflix.Notify.failure('Oops, there is no country with that name')
